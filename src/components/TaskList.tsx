@@ -28,7 +28,8 @@ export function TaskList() {
       isComplete: false
     }
 
-    setTasks([...tasks, newTask])
+    setTasks([...tasks, newTask]);
+    setNewTaskTitle('');
   }
 
   function handleToggleTaskCompletion(id: string) {
@@ -41,15 +42,15 @@ export function TaskList() {
       }
       
       return task
-    })
+    });
 
-    setTasks(newTasks)
+    setTasks(newTasks);
   }
 
   function handleRemoveTask(id: string) {
-    const newTasks = tasks.filter(task => task.id !== id)
+    const newTasks = tasks.filter(task => task.id !== id);
 
-    setTasks(newTasks)
+    setTasks(newTasks);
   }
 
   return (
